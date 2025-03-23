@@ -1,0 +1,88 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.card {
+  background-color: $c-white;
+  border-radius: 20px;
+  box-shadow: $shadow-md;
+  margin-top: auto;
+  max-width: 327px;
+  padding: $spacer-lg;
+  width: 100%;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacer-md;
+    margin-bottom: $spacer-lg;
+  }
+
+  &__image {
+    border-radius: 10px;
+    margin-bottom: $spacer-lg;
+    width: 100%;
+  }
+
+  &__category {
+    background-color: $c-primary;
+    border-radius: 4px;
+    padding: $spacer-xs $spacer-md;
+    width: min-content;
+
+    p {
+      @include text-preset(900, $font-size-xs, $c-gray-950);
+    }
+  }
+
+  &__date {
+    @include text-preset(500, $font-size-xs, $c-gray-950);
+  }
+
+  &__title {
+    @include text-preset(900, $font-size-lg, $c-gray-950);
+
+    &:hover {
+      color: $c-primary;
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    @include text-preset(500, $font-size-sm, $c-gray-500);
+  }
+
+  &__footer {
+    align-items: center;
+    display: flex;
+    gap: $spacer-md;
+  }
+
+  &__author-avatar {
+    height: 32px;
+    width: 32px;
+  }
+
+  &__author-name {
+    @include text-preset(900, $font-size-sm, $c-gray-950);
+  }
+}
+
+@media (min-width: 640px) {
+  .card {
+    max-width: 384px;
+
+    &__category,
+    &__date {
+      p {
+        font-size: $font-size-sm;
+      }
+    }
+
+    &__title {
+      font-size: $font-size-xl;
+    }
+    &__text {
+      font-size: $font-size-md;
+    }
+  }
+}

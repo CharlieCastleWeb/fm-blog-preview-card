@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "name": "fm-blog-preview-card",
+  "version": "1.0.0",
+  "description": "![Design preview for the Blog preview card coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "devDependencies": {
+    "sass": "^1.86.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch scss/global.scss css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
